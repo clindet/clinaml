@@ -1,0 +1,15 @@
+^.*\.Rproj$
+^.*\.Rbuildignore$
+^\.Rproj\.user$
+^.*\.test
+^data-raw$
+.travis.yml
+^_pkgdown.yml$
+^pre-db
+^Makefile$
+^Dockerfile$
+^README.Rmd$
+^_gsdata_$
+.circleci
+.editorconfig
+conda_env.yaml

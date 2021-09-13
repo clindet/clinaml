@@ -1,0 +1,23 @@
+Package: clinaml
+Type: Package
+Title: Clinical diagnosis tool for AML
+Version: 1.0.0
+Authors@R: person("Jianfeng", "Li", email = "lee_jianfeng@sjtu.edu.cn", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-2349-208X"))
+Description: 
+    The 'clinaml' package provides R functions to predict the gene expression profiling (GEP)-defined subgroups and the GEP-plus risk scores.
+Depends:
+    R (>= 3.3.0)
+URL: https://github.com/clindet/clinaml
+BugReports: https://github.com/clindet/clinaml/issues
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+    data.table,
+    stringr,
+    xgboost
+RoxygenNote: 7.1.1
+Suggests: testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
