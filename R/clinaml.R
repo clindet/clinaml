@@ -12,11 +12,16 @@
 #'
 #' @docType package
 #' @import xgboost
+#' @import DESeq2
+#' @import tximport
+#' @import BiocParallel
 #' @importFrom stringr str_detect str_replace_all str_split fixed
 #' @importFrom data.table fread fwrite
 #' @importFrom xgboost xgb.DMatrix
 #' @importFrom utils browseURL
 #' @importFrom reticulate use_condaenv
+#' @importFrom parallel detectCores
+#' @importFrom R.utils gunzip
 #' @name clinaml
 #'
 NULL

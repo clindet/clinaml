@@ -15,7 +15,11 @@ LazyData: true
 Imports:
     data.table,
     stringr,
-    xgboost
+    xgboost,
+    BiocParallel,
+    DESeq2,
+    tximport,
+    R.utils
 RoxygenNote: 7.1.1
 Suggests: testthat,
     knitr,

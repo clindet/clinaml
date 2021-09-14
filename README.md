@@ -40,7 +40,7 @@ R CMD INSTALL .
 # load package and set important options
 library(clinaml)
 options(clinaml.MODEL_DATA="/env/model/clinaml") # modified required
-options(clinaml.condaenv="clinaml") # modifed required
+options(clinaml.condaenv="clinaml") # modified required
 
 # XGBoost-based model (DESeq2 and TPM normalization)
 x <- system.file("extdata", "tcga_log2tpm_test.csv", package = "clinaml")
