@@ -25,7 +25,7 @@ autogluon_pred <- function (x = NULL, exp_type = "log2tpm") {
 
   condaenv <- options("clinaml.condaenv")[[1]]
   condaenv <- ifelse(is.null(condaenv), "clinaml", condaenv)
-  use_condaenv(condaenv, required = TRUE)
+  use_condaenv(condaenv)
  
   for (i in names(model_dat)) {
     tmp_out <- tempfile(fileext = ".csv")
