@@ -19,7 +19,7 @@
 #' @importFrom data.table fread fwrite
 #' @importFrom xgboost xgb.DMatrix
 #' @importFrom utils browseURL
-#' @importFrom reticulate use_condaenv
+##' @importFrom reticulate use_condaenv
 #' @importFrom parallel detectCores
 #' @importFrom R.utils gunzip
 #' @name clinaml

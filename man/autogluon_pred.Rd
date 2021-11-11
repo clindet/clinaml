@@ -4,12 +4,14 @@
 \alias{autogluon_pred}
 \title{Function to predict the GEP-subgroups using Autogluon model}
 \usage{
-autogluon_pred(x = NULL, exp_type = "log2tpm")
+autogluon_pred(x = NULL, exp_type = "log2tpm", use_models = 80)
 }
 \arguments{
 \item{x}{Normalized gene expression matrix or its file path}
 
 \item{exp_type}{deseq2 or log2tpm}
+
+\item{use_models}{models were used}
 }
 \description{
 Function to predict the GEP-subgroups using Autogluon model
