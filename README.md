@@ -27,11 +27,12 @@ git clone https://github.com/clindet/clinaml
 
 cd clinaml
 
-conda env create -f conda_env.yaml
-
-conda activate clinaml
-
 R CMD INSTALL .
+
+python3 -m pip install -U pip
+python3 -m pip install -U setuptools wheel
+python3 -m pip install -U "mxnet<2.0.0"
+python3 -m pip install autogluon==0.2.0
 ```
 
 ## Usage
@@ -55,6 +56,12 @@ res <- autogluon_pred(x, exp_type = "log2tpm")
 x2 <- system.file("extdata", "tcga_deseq2_test.csv", package = "clinaml")
 res2 <- autogluon_pred(x2, exp_type = "deseq2")
 ```
+
+Web interface based on the Hiplot platform is available here: https://hiplot.com.cn/clinical-tools/clinaml-gep. Users can get the following output in minutes.
+
+<div align=center>
+  <img src="https://s1.imagehub.cc/images/2021/11/13/clinaml-gep-0.z1qc77y9gq-1-tuya.jpg" width="50%" />
+</div>
 
 ## Maintainer
 
