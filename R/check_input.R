@@ -17,11 +17,6 @@ check_gep_dat <- function (x) {
     row.names(x) <- x[,1]
     x <- x[,-1]
   }
-  for (i in 1:ncol(x)) {
-    x[,i] <- as.numeric(x[,i])
-  }
-  fil <- apply(x, 2, function(x){all(is.na(x))})
-  if (any(fil)) x <- x[,!fil]
   if (all(!cluster_genes[,1] %in% colnames(x)) && all(!cluster_genes[,2] %in% colnames(x))) {
     x <- t(x)
   }
@@ -59,6 +54,11 @@ check_gep_dat <- function (x) {
     }
   }
   x <- x[,cluster_genes$symbol]
+  for (i in 1:ncol(x)) {
+    x[,i] <- as.numeric(x[,i])
+  }
+  fil <- apply(x, 2, function(x){all(is.na(x))})
+  if (any(fil)) x <- x[,!fil]
   if (max(var(t(x))) > 1000) {
     x <- log2(x + 1)
   }
