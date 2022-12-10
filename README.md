@@ -12,6 +12,27 @@ To refined the risk stratification in AML, firstly, we utilized the multicenter 
 
 Via combining high-risk GEP-defined subgroups, we identified deregulated gene expression and alternative splicing events with prognostic value. Finally, based on multiple feature selection methods, we proposed the GEP-plus risk scores using age, GEP-defined subgroups, aberrant gene expression, and splicing events, which could independently predict a subset of AML with an extremely poor prognosis, as well as early death in an independent APL cohort.
 
+## Note
+
+A new online version of the prediction models based on 655 AMLs are provided in http://hiplot.org/clinical-tools/clinaml-gep2, which was compatible with the predictions of this repository. It can be used to get G1-G8 labels of AML:
+
+- G1: PML::RARA
+- G2: CBFB::MYH11
+- G3: RUNX1::RUNXT1
+- G4: biCEBPA/-like
+- G5: myelodysplasia-related/-like
+- G6: HOX-committed
+- G7: HOX-primitive
+- G8: HOX-mixed
+
+G1-G8 was associated with distinct prognosis and drug sensitivities, supporting the clinical applicability of this transcriptome-based classification of AML. These molecular subgroups illuminate the complex molecular network of AML, which may promote systematic studies of disease pathogenesis and foster the screening of targeted agents based on omics.
+
+The predicted labels of TCGA LAML and Beat AML cohorts could be directly downloaded from [here](https://www.pnas.org/doi/suppl/10.1073/pnas.2211429119/suppl_file/pnas.2211429119.sd09.xlsx).
+
+We would like to invite you to cite us paper:
+
+- Cheng WY, Li JF, Zhu YM, Lin XJ, Wen LJ, Zhang F, Zhang YL, Zhao M, Fang H, Wang SY, Lin XJ, Qiao N, Yin W, Zhang JN, Dai YT, Jiang L, Sun XJ, Xu Y, Zhang TT, Chen SN, Zhu HH, Chen Z, Jin J, Wu DP, Shen Y, Chen SJ. Transcriptome-based molecular subtypes and differentiation hierarchies improve the classification framework of acute myeloid leukemia. Proc Natl Acad Sci U S A. 2022 Dec 6;119(49):e2211429119. doi: 10.1073/pnas.2211429119. Epub 2022 Nov 28. PMID: 36442087.
+
 ## Requirements
 
 - R (4.0.2)
@@ -57,11 +78,7 @@ x2 <- system.file("extdata", "tcga_deseq2_test.csv", package = "clinaml")
 res2 <- autogluon_pred(x2, exp_type = "deseq2")
 ```
 
-Web interface based on the Hiplot platform is available here: https://hiplot.com.cn/clinical-tools/clinaml-gep. Users can get the following output in minutes.
-
-<div align=center>
-  <img src="https://s1.imagehub.cc/images/2021/11/13/clinaml-gep-0.z1qc77y9gq-1-tuya.jpg" width="50%" />
-</div>
+Web interface based on the Hiplot (ORG) platform is available here: https://hiplot.org/clinical-tools/clinaml-gep. Users can get the following output in minutes.
 
 ## Maintainer
 
